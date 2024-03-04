@@ -95,7 +95,7 @@ class _NNRunnerBase(_RunnerBase, GridSearchMixin, ABC):
 
             try:
                 y_pred = sr.best_estimator_.predict(self.x_test)
-                score = self.score(y_pred=y_pred, y_true=self.y_train)
+                score = self.score(y_pred=y_pred, y_true=self.y_test)
                 self._print_banner(f'Score: {score}')
             except:
                 pass
